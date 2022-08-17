@@ -1,0 +1,39 @@
+
+
+.nav_bar {
+    background-color: #fff !important;
+}
+
+.link {
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.link_activo {
+    font-weight: 600;
+}
+
+.link_inactivo {
+    font-weight: 200px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px !important;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+.login {
+    margin-right: 10px;
+}
+
+.registro {
+    color: #FC679C;
+}

@@ -1,0 +1,8 @@
+.logo_auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
