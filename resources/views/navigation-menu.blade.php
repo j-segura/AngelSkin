@@ -1,6 +1,11 @@
 @php
 $nav_links = [
     [
+        'name' => 'Inicio',
+        'route' => route('inicio'),
+        'active' => request()->routeIs('inicio'),
+    ],
+    [
         'name' => 'Tienda',
         'route' => route('tienda'),
         'active' => request()->routeIs('tienda'),
@@ -10,12 +15,6 @@ $nav_links = [
         'route' => route('nosotros'),
         'active' => request()->routeIs('nosotros'),
     ],
-    [
-        'name' => 'Contactanos',
-        'route' => route('contactanos'),
-        'active' => request()->routeIs('contactanos'),
-    ],
-    
 ];
 @endphp
 

@@ -63,75 +63,289 @@
     }
 }
 
-/* CONTENIDO TIENDA */
-
-#contenido_tienda {
-    height: 100vh;
-    padding: 80px 20px
+/*----------------------- SECCION DE CATEGORIAS ---------------------------------*/
+.category {
+    margin: 50px 0 10px 0;
+    padding: 0 8rem;
 }
 
-.categorias_principales {
+.category .box_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    width: 100%;
-    height: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 2rem;
 }
 
-.categoria {
-    height: 200px;
-    background: #cfcfcf !important;
+.category .box_container .box {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.category .box_container .box:hover h3 {
+    color: #f08080;
+}
+
+.category .box_container .box img {
+    height: 7rem;
+    margin-bottom: 0 0 1rem 0;
+}
+
+.category .box_container .box h3 {
+    font-size: 1rem;
+    color: #222;
+    font-weight: 500;
+}
+
+/*----------------------- ABOUT ---------------------------------*/
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+}
+
+.about .img {
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.about .img img {
+    width: 100%;
+    box-shadow: 3rem 3rem 0 rgb(228, 228, 228);
+}
+
+.about .content {
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.about .content .box {
+    padding: 3rem;
+    background-color: rgb(228, 228, 228);
+}
+
+.about .content .box h3 {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.about .content .box p {
+    padding: 1rem 0;
+    line-height: 2;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem !important;
+}
+
+.read_more_btn {
+    padding: 0.5rem 1rem;
+    background-color: rgb(228, 228, 228);
+    font-size: 1rem;
+    box-shadow: 6px 6px 22px -3px rgba(179, 177, 179, 1);
+}
+
+.read_more_btn:hover {
+    background-color: #ffafcb;
+}
+
+
+@media(max-width: 1080px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem;
+    }
+
+    .about .img img {
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+@media(max-width: 600px) {
+    .about {
+        padding: 0;
+        margin-top: 60px;
+    }
+}
+
+/*--------------- tienda --------------*/
+
+.tienda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tienda_heading {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2%;
+    margin-bottom: 3rem;
+}
+
+.tienda_heading h2 {
+    font-weight: 500;
+    margin: 0;
+    padding: 5px 20px;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.tienda_heading span {
+    color: #FF4487;
+}
+
+.tienda_heading p {
+    color: #888;
+}
+
+.products_slider {
+    width: 90%;
+    margin: auto;
+}
+
+.tienda .slide {
+    width: 289px !important;
+    height: 390px;
+    border: 2px solid #111;
+    background-color: rgb(245, 245, 245);
     position: relative;
 }
 
-.categoria h3 {
-    color: #727272;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 25px;
+.tienda .slide .img {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
 }
 
-.categoria h2 {
-    color: #000000;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 35px;
+.tienda .slide .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
 }
 
-.categoria img {
-    width: auto;
-    height: 190px;
+.tienda .slide:hover .img img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-.categoria div {
-    padding: 20px;
-    text-align: end;
-}
 
-.categoria a {
+
+.tienda .slide .descuento {
     position: absolute;
-    right: 20px;
-    bottom: 10px;
-    text-decoration: underline;
+    top: 10px;
+    left: -10px;
+    background: #ff8fb6;
+    padding: 0 10px;
+    z-index: 3 !important;
 }
 
-.bg {
-    background: #FCE9E9 !important;
+.tienda .slide .content {
+    padding: 1rem;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-width: 1200px) {
-    .categorias_principales {
-        grid-template-columns: 1fr 1fr;
-        padding: 0px 40px;
-    }    
+.tienda .slide .content .stars {
+    padding-bottom: .2rem;
 }
 
-@media screen and (max-width: 985px) {
-    .categorias_principales {
-        grid-template-columns: 1fr;
-        padding: 0px 40px;
-    }    
+.tienda .slide .content .stars i {
+    font-size: 1rem;
+    color: #777;
+}
+
+.tienda .slide .content p {
+    font-size: 1rem;
+    color: #222;
+    line-height: 2;
+}
+
+.tienda .slide .content .price {
+    font-size: 1rem;
+    color: #e84393;
+}
+
+.tienda .slide .content .price span {
+    font-size: 0.8rem;
+    color: #777;
+    text-decoration: line-through;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.2rem !important;
+  color: #222;
+}
+
+/* gallery ------------------------------*/
+
+.tienda_heading p {
+    width: 100%;
+    text-align: center;
+}
+
+.galleria_h {
+    margin: 20px 0;
+    margin-bottom: 40px !important;
+}
+
+.gallery {
+    background: rgb(245, 245, 245);
+    width: 90%;
+    margin: auto;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important; 
+}
+
+.gallery .lightbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+@media(max-width: 1100px) {
+    .gallery .lightbox {
+        grid-template-columns: 1fr 1fr;      
+    }
+}
+
+@media(max-width: 650px) {
+    .gallery .lightbox {
+        grid-template-columns: 1fr;      
+    }
+}
+
+.gallery .lightbox a {
+    height: 280px;
+    /* width: 410px; */
+    overflow: hidden;
+    border: 10px solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.gallery .lightbox a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery .lightbox a:hover img {
+    transform: scale(1.1);
 }

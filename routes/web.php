@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::view('/', 'tienda')->name('tienda');
+Route::view('/', 'articulos.index')->name('inicio');
 Route::view('/nosotros', 'nosotros')->name('nosotros');
-Route::view('/contactanos', 'contactanos')->name('contactanos');
+Route::view('/tienda', 'articulos.tienda')->name('tienda');
 
 /* Route::view('/entrar', 'auth.entrar')->name('entrar');
 Route::view('/registro', 'auth.registro')->name('registro'); */
