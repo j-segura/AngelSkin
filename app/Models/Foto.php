@@ -5,13 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Permiso extends Model
+class Foto extends Model
 {
     use HasFactory;
-
-    //relacion n:n
-
-    public function roles() {
-        return $this->belongsToMany('App\Models\Role');
-    }
 }

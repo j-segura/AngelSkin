@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::view('/', 'articulos.index')->name('inicio');
+Route::get('/', [HomeController::class, 'index'])->name('inicio');
 Route::view('/nosotros', 'nosotros')->name('nosotros');
 Route::view('/tienda', 'articulos.tienda')->name('tienda');
 

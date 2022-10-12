@@ -47,35 +47,12 @@
 
     <section class="category">
         <div class="box_container">
+            @foreach ($categorias as $categoria)
             <a href="" class="box">
-                <img src="{{ asset('img/category-1.png') }}">
-                <h3>Skincare</h3>
+                <img src="/img/categorias/{{ $categoria->image }}">
+                <h3>{{ $categoria->name }}</h3>
             </a>
-
-            <a href="" class="box">
-                <img src="{{ asset('img/category-2.png') }}">
-                <h3>Labios</h3>
-            </a>
-
-            <a href="" class="box">
-                <img src="{{ asset('img/category-3.png') }}">
-                <h3>Cabello</h3>
-            </a>
-
-            <a href="" class="box">
-                <img src="{{ asset('img/category-4.png') }}">
-                <h3>ojo</h3>
-            </a>
-
-            <a href="" class="box">
-                <img src="{{ asset('img/category-5.png') }}">
-                <h3>Maquillaje</h3>
-            </a>
-
-            <a href="" class="box">
-                <img src="{{ asset('img/category-6.png') }}">
-                <h3>Fragancias</h3>
-            </a>
+            @endforeach
         </div>
     </section>
 
@@ -107,7 +84,7 @@
             <div class="swiper-wrapper">
 
                 <!-- card ---------------->
-                <a  href="https://www.youtube.com/" class="swiper-slide slide">
+                <a href="https://www.youtube.com/" class="swiper-slide slide">
                     <span class="descuento">20%</span>
                     <div class="img">
                         <img src="{{ asset('img/images/product-1.jpg') }}">
@@ -225,18 +202,11 @@
         </div>
 
         <div class="lightbox">
-            <a href="{{ asset('img/gallery/gallery1.jpg') }}"><img
-                    src="{{ asset('img/gallery/gallery1.jpg') }}"></a>
-            <a href="{{ asset('img/gallery/gallery2.jpg') }}"><img
-                    src="{{ asset('img/gallery/gallery2.jpg') }}"></a>
-            <a href="{{ asset('img/gallery/gallery3.jpg') }}"><img
-                    src="{{ asset('img/gallery/gallery3.jpg') }}"></a>
-            <a href="{{ asset('img/gallery/gallery4.jpg') }}"><img
-                    src="{{ asset('img/gallery/gallery4.jpg') }}"></a>
-            <a href="{{ asset('img/gallery/gallery5.jpg') }}"><img
-                    src="{{ asset('img/gallery/gallery5.jpg') }}"></a>
-            <a href="{{ asset('img/gallery/gallery6.jpg') }}"><img
-                    src="{{ asset('img/gallery/gallery6.jpg') }}"></a>
+            @foreach ($fotos as $foto)
+            <a href="/img/gallery/{{ $foto->image }}">
+                <img src="/img/gallery/{{ $foto->image }}">
+            </a>
+            @endforeach
         </div>
     </section>
 
@@ -260,7 +230,7 @@
         width: 90%;
         margin: auto;
         margin-top: 40px !important;
-        margin-bottom: 40px !important; 
+        margin-bottom: 40px !important;
     }
 
     .gallery .lightbox {
@@ -271,13 +241,13 @@
 
     @media(max-width: 1100px) {
         .gallery .lightbox {
-            grid-template-columns: 1fr 1fr;      
+            grid-template-columns: 1fr 1fr;
         }
     }
 
     @media(max-width: 650px) {
         .gallery .lightbox {
-            grid-template-columns: 1fr;      
+            grid-template-columns: 1fr;
         }
     }
 
