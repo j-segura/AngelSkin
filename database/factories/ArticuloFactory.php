@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Categoria;
 use App\Models\Marca;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Articulo>
@@ -22,6 +23,7 @@ class ArticuloFactory extends Factory
 
         return [
             'name' => $name,
+            'slug' => Str::slug($name),
             'image' => $this->faker->randomElement([
                 'product-1.jpg',
                 'product-2.jpg',

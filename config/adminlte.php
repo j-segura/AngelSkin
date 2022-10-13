@@ -316,6 +316,13 @@ return [
             'text' => 'Fotos',
             'route'  => 'admin.fotos.index',
             'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/fotos*'],
+        ],
+        [
+            'text' => 'Marcas',
+            'route'  => 'admin.marcas.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/marcas*'],
         ],
     ],
 

@@ -17,31 +17,37 @@ class CategoriaSeeder extends Seeder
     {
         Categoria::create([
             'name' => 'Skincare',
-            'image' => 'category-1.png'
+            'slug' => 'skincare',
+            'image' => 'category-1.png',
         ]);
 
         Categoria::create([
             'name' => 'Labios',
+            'slug' => 'labios',
             'image' => 'category-2.png'
         ]);
 
         Categoria::create([
             'name' => 'Cabello',
+            'slug' => 'cabello',
             'image' => 'category-3.png'
         ]);
 
         Categoria::create([
             'name' => 'Ojo',
+            'slug' => 'ojo',
             'image' => 'category-4.png'
         ]);
 
         Categoria::create([
             'name' => 'Maquillaje',
+            'slug' => 'maquillaje',
             'image' => 'category-5.png'
         ]);
 
         Categoria::create([
             'name' => 'Fragancias',
+            'slug' => 'fragancias',
             'image' => 'category-6.png'
         ]);
     }
