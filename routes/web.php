@@ -5,11 +5,12 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('inicio');
+Route::get('tienda', [HomeController::class, 'tienda'])->name('tienda');
+Route::get('articulo/{articulo}', [HomeController::class, 'show'])->name('articulos.show');
 Route::view('/nosotros', 'nosotros')->name('nosotros');
-Route::view('/tienda', 'articulos.tienda')->name('tienda');
+Route::get('categoria/{categoria}', [HomeController::class, 'categoria'])->name('articulos.categoria');
+Route::get('marca/{marca}', [HomeController::class, 'marca'])->name('articulos.marca');
 
-/* Route::view('/entrar', 'auth.entrar')->name('entrar');
-Route::view('/registro', 'auth.registro')->name('registro'); */
 
 Route::middleware([
     'auth:sanctum',

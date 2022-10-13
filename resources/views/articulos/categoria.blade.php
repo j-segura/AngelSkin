@@ -1,7 +1,7 @@
 <x-app-layout>
     <div>
         <div class="tienda_heading">
-            <h2><span>Todos</span> Nuestros Productos</h2>
+            <h2>{{ $categoria->name }}</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sunt</p>
         </div>
 
@@ -9,7 +9,7 @@
             <!-- card ---------------->
             @foreach ($articulos as $articulo)
             <div class="producto">
-                <a href="{{ route('articulos.show', $articulo) }}">
+                <a href="https://www.youtube.com/">
                     <div class="img_product">
                         <img src="/img/articulos/{{ $articulo->image }}">
                     </div>

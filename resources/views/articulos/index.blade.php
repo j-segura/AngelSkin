@@ -48,7 +48,7 @@
     <section class="category">
         <div class="box_container">
             @foreach ($categorias as $categoria)
-            <a href="" class="box">
+            <a href="{{ route('articulos.categoria', $categoria) }}" class="box">
                 <img src="/img/categorias/{{ $categoria->image }}">
                 <h3>{{ $categoria->name }}</h3>
             </a>
@@ -76,7 +76,7 @@
 
     <section id="tienda" class="tienda">
         <div class="tienda_heading">
-            <h2>Productos <span>Destacados</span></h2>
+            <h2>Productos <span>Nuevos</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sunt</p>
         </div>
 
@@ -84,108 +84,18 @@
             <div class="swiper-wrapper">
 
                 <!-- card ---------------->
-                <a href="https://www.youtube.com/" class="swiper-slide slide">
-                    <span class="descuento">20%</span>
+                @foreach ($articulos as $articulo)
+                <a href="{{ route('articulos.show', $articulo) }}" class="swiper-slide slide">
+                    <span class="descuento">Nuevo</span>
                     <div class="img">
-                        <img src="{{ asset('img/images/product-1.jpg') }}">
+                        <img src="/img/articulos/{{ $articulo->image }}">
                     </div>
                     <div class="content">
-                        <p>beauty fasdljk fa</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
+                        <p>{{ $articulo->name }}</p>
+                        <div class="price">${{ $articulo->precio }}</div>
                     </div>
                 </a>
-
-                <!-- card ---------------->
-                <div class="swiper-slide slide">
-                    <span class="descuento">20%</span>
-                    <div class="img">
-                        <img src="{{ asset('img/images/product-2.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p>beauty products</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
-                        <a href="">ver</a>
-                    </div>
-                </div>
-
-                <!-- card ---------------->
-                <div class="swiper-slide slide">
-                    <span class="descuento">20%</span>
-                    <div class="img">
-                        <img src="{{ asset('img/images/product-3.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p>beauty products</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
-                        <a href="">ver</a>
-                    </div>
-                </div>
-
-                <!-- card ---------------->
-                <div class="swiper-slide slide">
-                    <span class="descuento">20%</span>
-                    <div class="img">
-                        <img src="{{ asset('img/images/product-4.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p>beauty products</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
-                        <a href="">ver</a>
-                    </div>
-                </div>
-
-                <!-- card ---------------->
-                <div class="swiper-slide slide">
-                    <span class="descuento">20%</span>
-                    <div class="img">
-                        <img src="{{ asset('img/images/product-5.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p>beauty products</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
-                        <a href="">ver</a>
-                    </div>
-                </div>
-
-                <!-- card ---------------->
-                <div class="swiper-slide slide">
-                    <span class="descuento">20%</span>
-                    <div class="img">
-                        <img src="{{ asset('img/images/product-6.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p>beauty products</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
-                        <a href="">ver</a>
-                    </div>
-                </div>
-
-                <!-- card ---------------->
-                <div class="swiper-slide slide">
-                    <span class="descuento">20%</span>
-                    <div class="img">
-                        <img src="{{ asset('img/images/product-7.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p>beauty products</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
-                        <a href="">ver</a>
-                    </div>
-                </div>
-
-                <!-- card ---------------->
-                <div class="swiper-slide slide">
-                    <span class="descuento">20%</span>
-                    <div class="img">
-                        <img src="{{ asset('img/images/product-8.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p>beauty products</p>
-                        <div class="price">$49.99 <span>$79.99</span></div>
-                        <a href="">ver</a>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
 
             <div class="swiper-button-next"></div>

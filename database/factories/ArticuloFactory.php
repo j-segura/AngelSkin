@@ -33,7 +33,7 @@ class ArticuloFactory extends Factory
                 'product-8.jpg',
             ]),
             'descripcion' => $this->faker->text(300),
-            'precio' => $this->faker->randomElement(['4000', '5000', '10000', '12000', '100000']),
+            'precio' => $this->faker->randomElement(['4.000', '5.000', '10.000', '12.000', '100.000']),
             'categoria_id' => Categoria::all()->random()->id,
             'marca_id' => Marca::all()->random()->id,
         ];
