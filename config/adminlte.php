@@ -330,6 +330,12 @@ return [
             'icon' => 'fab fa-fw fa-buffer',
             'active' => ['admin/categorias*'],
         ],
+        [
+            'text' => 'Articulos',
+            'route'  => 'admin.articulos.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/articulos*'],
+        ],
     ],
 
     /*

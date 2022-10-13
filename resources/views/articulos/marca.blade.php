@@ -9,7 +9,7 @@
             <!-- card ---------------->
             @foreach ($articulos as $articulo)
             <div class="producto">
-                <a href="https://www.youtube.com/">
+                <a href="{{ route('articulos.show', $articulo) }}">
                     <div class="img_product">
                         <img src="/img/articulos/{{ $articulo->image }}">
                     </div>

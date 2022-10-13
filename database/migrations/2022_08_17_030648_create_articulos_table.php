@@ -21,11 +21,11 @@ return new class extends Migration
             $table->string('image');
             $table->longText('descripcion');
             $table->string('precio');
-            $table->unsignedBigInteger('categoria_id')->nullable();
-            $table->unsignedBigInteger('marca_id')->nullable();
+            $table->unsignedBigInteger('categoria_id');
+            $table->unsignedBigInteger('marca_id');
 
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('set null');
-            $table->foreign('marca_id')->references('id')->on('marcas')->onDelete('set null');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreign('marca_id')->references('id')->on('marcas')->onDelete('cascade');
 
             $table->timestamps();
         });

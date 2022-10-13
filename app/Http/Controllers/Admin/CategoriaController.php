@@ -91,7 +91,7 @@ class CategoriaController extends Controller
         $request->validate([
             'name' => 'required',
             'slug' => "required|unique:categorias,slug,$categoria->id",
-            'image' => 'required|image|max:2048',
+            'image' => 'image|max:2048',
         ]);
 
         $cat = $request->all();
