@@ -324,6 +324,12 @@ return [
             'icon' => 'fab fa-fw fa-buffer',
             'active' => ['admin/marcas*'],
         ],
+        [
+            'text' => 'Categorias',
+            'route'  => 'admin.categorias.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/categorias*'],
+        ],
     ],
 
     /*
