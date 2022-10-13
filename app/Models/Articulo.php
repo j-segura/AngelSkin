@@ -9,6 +9,8 @@ class Articulo extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     //relacion 1:n 
 
     public function categoria()
